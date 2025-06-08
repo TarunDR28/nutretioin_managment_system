@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Nutrition Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Page -->
+        <div id="login-page" class="page active">
+            <h1>Nutrition Manager</h1>
+            <div class="progress-bar">
+                <div class="progress" style="width: 33%"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            
+            <button id="login-btn">Next</button>
+        </div>
+        
+        <!-- Profile Page -->
+        <div id="profile-page" class="page">
+            <h1>Your Details</h1>
+            <div class="progress-bar">
+                <div class="progress" style="width: 66%"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Your age in years">
+            </div>
+            
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Your height in centimeters">
+            </div>
+            
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Your weight in kilograms">
+            </div>
+            
+            <div class="form-group">
+                <label for="activity">Activity Level:</label>
+                <select id="activity">
+                    <option value="">Select your activity level</option>
+                    <option value="sedentary">Mostly inactive or sitting</option>
+                    <option value="light">Light exercise 1-3 days/week</option>
+                    <option value="moderate">Moderate exercise 3-5 days/week</option>
+                    <option value="active">Hard exercise 6-7 days/week</option>
+                    <option value="very_active">Very hard daily exercise or physical job</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="goal">Your Goal:</label>
+                <select id="goal">
+                    <option value="">Select your goal</option>
+                    <option value="weight_loss">Lose Weight</option>
+                    <option value="maintenance">Maintain Weight</option>
+                    <option value="weight_gain">Gain Weight</option>
+                    <option value="muscle_gain">Build Muscle</option>
+                    <option value="health">Improve Overall Health</option>
+                </select>
+            </div>
+            
+            <button id="profile-btn">Get Recommendations</button>
+        </div>
+        
+        <!-- Results Page -->
+        <div id="results-page" class="page">
+            <h1>Your Nutrition Plan</h1>
+            <div class="progress-bar">
+                <div class="progress" style="width: 100%"></div>
+            </div>
+            
+            <div class="result-box">
+                <h2>Your Details</h2>
+                <div id="profile-summary"></div>
+            </div>
+            
+            <div class="result-box">
+                <h2>Daily Nutrition</h2>
+                <div id="calories-result"></div>
+                <div id="macros-result"></div>
+            </div>
+            
+            <div class="result-box">
+                <h2>Recommendations</h2>
+                <div id="recommendations"></div>
+            </div>
+            
+            <button id="start-over-btn">Start Over</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
